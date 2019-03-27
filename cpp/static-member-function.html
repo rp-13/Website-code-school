@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>static member function</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+            </header>
+            <section>
+                <div class="row">
+                    <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                        <nav class="nav1">
+                            <ul>
+                                <h3>cpp language</h3>
+                                <a href="cppindex.html"><li>Introduction</li></a>
+                                <a href="basic-structure.html"><li>Basic structure</li></a>
+                                <a href="Cpp-tokens.html"><li>Cpp Tokens</li></a>
+                                <a href="data-types.html"><li>Data types</li></a>
+                                <a href="type-modifiers.html"><li>Type modifiers</li></a>
+                                <a href="variables.html"><li>Variables</li></a>
+                                <a href="constants.html"><li>Constants</li></a>
+                                <a href="storage-classes.html"><li>Storage classes</li></a>
+                                <a href="opeatores.html"><li>Operators</li></a>
+                                <a href="control-statements.html"><li>Control statements</li></a>
+                                <a href="arrays.html"><li>Arrays</li></a>
+                                <a href="strings.html"><li>Strings</li></a>
+                                <a href="pointers.html"><li>Pointers</li></a>
+                                <a href="functions.html"><li>Functions</li></a>
+                                <a href="structures.html"><li>Structures</li></a>
+                                <a href="unions.html"><li>Unions</li></a>
+                                <a href="enumerations.html"><li>Enumerations</li></a>
+                                <a href="oop.html"><li>object oriented programming</li></a>
+                                <a href="classes-and-objects.html"><li>classes and objects</li></a>
+                                <a href="special-member-functions.html"><li>Special member functions</li></a>
+                                <a href="function-overloading.html"><li>Function overloading</li></a>
+                                <a href="operator-overloading.html"><li>Operator overloading</li></a>
+                                <a href="inheritance.html"><li>Inheritance</li></a>
+                                <a href="polymorphisum.html"><li>Polymorphism and virtual function</li></a>
+                                <a href="templates.html"><li>Templates</li></a>
+                                <a href="exception-handling.html"><li>Exception handling</li></a>
+                                <a href="data-fil-operations.html"><li>Data file operations</li></a>
+                                <a href="stl.html"><li>STL</li></a>
+                                <h3>pratice in cpp</h3>
+                                <a href="questions.html"><li>Questions</li></a>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                        <div style="background-color: #e67e22;">
+                            <h1 style="margin-top: 0; padding: 6px;">static member function</h1>
+                        </div>
+                        <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                            <p>
+                                When a member function is declared of type static, then it is possible to invoke the member functions directly, with the help of class name without declaring any object of that class. A static function can have to access only other static members declare in the same class. A static member function can be called using classname as follows. 
+                            </p>
+                            <h4>syntax</h4>
+<pre class="compiler">
+<span>class_name</span><span class="red">::</span><span>function_name</span><span>([arguments_list])</span><span class="red">;</span>
+</pre>
+<h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#inclide&lt;conio.h&gt;</span>
+<span class="blue">class</span> <span class="boldall">num</span>
+<span class="red">{</span>
+  <span class="blue">private:</span>
+  <span class="blue">int</span> <span>n</span><span class="red">;</span>
+  <span class="blue">public:</span>
+  <span class="blue">static void</span> <span>accept</span><span class="red">();</span>
+  <span class="blue">static void</span> <span>disp</span><span class="red">();</span>
+  <span class="blue">void</span> <span>display</span><span class="red">();</span>
+<span class="red">};</span>
+<span class="blue">int</span> <span>num</span><span class="red">::</span><span>n</span><span class="red">;</span>
+<span class="blue">void</span><span> num</span><span class="red">::</span><span>accept</span><span class="red">()</span>
+<span class="red">{</span>
+  <span class="boldall">cin>></span><span>n</span><span class="red">;</span>
+<span class="red">}</span>
+<span class="blue">void</span><span> num</span><span class="red">::</span><span>disp</span><span class="red">()</span>
+<span class="red">{</span>
+  <span class="boldall">cout<<</span><span>n</span><span class="boldall"><<</span><span>endl</span><span class="red">;</span>
+<span class="red">}</span>
+<span class="blue">void</span><span> num</span><span class="red">::</span><span>display</span><span class="red">()</span>
+<span class="red">{</span>
+  <span class="boldall">cout<<</span><span>n</span><span class="boldall"><<</span><span>endl</span><span class="red">;</span>
+<span class="red">}</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span>num nb</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Initial data in the Object :"</span><span class="red">;</span>
+  <span>nb.display</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Enter any Number into static data member :"</span><span class="red">;</span>
+  <span>num</span><span class="red">::</span><span>accept</span><span class="red">();</span>
+  <span class="boldall">cout<<</span><span class="blue">"Given Number  in the static data member  :"</span><span class="red">;</span>
+  <span>num</span><span class="red">::</span><span>disp</span><span class="red">();</span>
+  <span class="boldall">cout<<</span><span class="blue">"value in the Object   :"</span><span class="red">;</span>
+  <span>nb</span><span class="red">.</span><span>display</span><span class="red">();</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+<hr>
+                            
+                            <div>
+                                <a href="special-member-functions.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                                <a href="special-member-functions.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-5 right-box">
+        
+                    </div>
+                </div>
+            </section>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="/java script/jquery.waypoints.min.js"></script>
+            <script src="/java script/jqueryforC.js"></script>
+    
+</body>
+</html>

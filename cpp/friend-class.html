@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>friend class</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+            </header>
+            <section>
+                <div class="row">
+                    <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                        <nav class="nav1">
+                            <ul>
+                                <h3>cpp language</h3>
+                                <a href="cppindex.html"><li>Introduction</li></a>
+                                <a href="basic-structure.html"><li>Basic structure</li></a>
+                                <a href="Cpp-tokens.html"><li>Cpp Tokens</li></a>
+                                <a href="data-types.html"><li>Data types</li></a>
+                                <a href="type-modifiers.html"><li>Type modifiers</li></a>
+                                <a href="variables.html"><li>Variables</li></a>
+                                <a href="constants.html"><li>Constants</li></a>
+                                <a href="storage-classes.html"><li>Storage classes</li></a>
+                                <a href="opeatores.html"><li>Operators</li></a>
+                                <a href="control-statements.html"><li>Control statements</li></a>
+                                <a href="arrays.html"><li>Arrays</li></a>
+                                <a href="strings.html"><li>Strings</li></a>
+                                <a href="pointers.html"><li>Pointers</li></a>
+                                <a href="functions.html"><li>Functions</li></a>
+                                <a href="structures.html"><li>Structures</li></a>
+                                <a href="unions.html"><li>Unions</li></a>
+                                <a href="enumerations.html"><li>Enumerations</li></a>
+                                <a href="oop.html"><li>object oriented programming</li></a>
+                                <a href="classes-and-objects.html"><li>classes and objects</li></a>
+                                <a href="special-member-functions.html"><li>Special member functions</li></a>
+                                <a href="function-overloading.html"><li>Function overloading</li></a>
+                                <a href="operator-overloading.html"><li>Operator overloading</li></a>
+                                <a href="inheritance.html"><li>Inheritance</li></a>
+                                <a href="polymorphisum.html"><li>Polymorphism and virtual function</li></a>
+                                <a href="templates.html"><li>Templates</li></a>
+                                <a href="exception-handling.html"><li>Exception handling</li></a>
+                                <a href="data-fil-operations.html"><li>Data file operations</li></a>
+                                <a href="stl.html"><li>STL</li></a>
+                                <h3>pratice in cpp</h3>
+                                <a href="questions.html"><li>Questions</li></a>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                        <div style="background-color: #e67e22;">
+                            <h1 style="margin-top: 0; padding: 6px;">friend class</h1>
+                        </div>
+                        <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                            <p>
+                                If we make the entire class as a friend, then automatically all the members of the class become friends.
+       In the below example, in class cl1, we have declared the entire class cl2 as a friend, hence as a result all the member functions of the cl2 can access all the private members of class cl1. 
+                            </p>
+                            <h4>containership</h4>
+                            <p>
+                                Containing a class object inside another class is called as containership. The class which is containing the object is called as container class. 
+                            </p>
+                            <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#inclide&lt;conio.h&gt;</span>
+<span class="green">using namespace</span> <span class="red">std;</span>
+<span class="blue">class</span> <span>cl2</span><span class="red">;</span>
+<span class="blue">class</span> <span class="boldall">cl1</span>
+<span class="red">{</span>
+  <span class="blue">private:</span>
+  <span class="blue">int</span> <span>n</span><span class="red">;</span>
+  <span class="blue">friend</span> <span>cl2</span><span class="red">;</span>
+<span class="red">};</span>
+<span class="blue">class</span> <span>cl2</span>
+<span class="red">{</span> 
+  <span class="blue">private</span><span class="red">:</span>
+  <span>cl1ob</span><span class="red">;</span>
+  <span class="blue">public:</span>
+  <span class="blue">void</span> <span>accept</span><span class="red">()</span>
+  <span class="red">{</span>
+    <span class="boldall">cout<<</span><span class="blue">"Enter data into object of cl1 :"</span><span class="red">;</span>
+    <span class="boldall">cin>></span><span class="blue">ob.n</span><span class="red">;</span>
+  <span class="red">}</span>
+  <span class="blue">void</span> <span>disp</span><span class="red">()</span>
+  <span class="red">{</span>
+    <span class="boldall">cout<<</span><span class="blue">"Given Data in the object of cl1   :"</span><span class="boldall"><<</span><span>ob.n</span><span class="red">;</span>
+  <span class="red">}</span>
+<span class="red">};</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span>cl2 obj</span><span class="red">;</span>
+  <span>obj.accept</span><span class="red">();</span>
+  <span>obj.disp</span><span class="red">();</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>                            
+                            <div>
+                                <a href="special-member-functions.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                                <a href="special-member-functions.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-5 right-box">
+        
+                    </div>
+                </div>
+            </section>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="/java script/jquery.waypoints.min.js"></script>
+            <script src="/java script/jqueryforC.js"></script>
+    
+</body>
+</html>

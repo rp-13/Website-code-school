@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>static data member</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+            </header>
+            <section>
+                <div class="row">
+                    <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                        <nav class="nav1">
+                            <ul>
+                                <h3>cpp language</h3>
+                                <a href="cppindex.html"><li>Introduction</li></a>
+                                <a href="basic-structure.html"><li>Basic structure</li></a>
+                                <a href="cppindex.html"><li>Cpp Tokens</li></a>
+                                <a href="data-types.html"><li>Data types</li></a>
+                                <a href="type-modifiers.html"><li>Type modifiers</li></a>
+                                <a href="variables.html"><li>Variables</li></a>
+                                <a href="constants.html"><li>Constants</li></a>
+                                <a href="storage-classes.html"><li>Storage classes</li></a>
+                                <a href="opeatores.html"><li>Operators</li></a>
+                                <a href="control-statements.html"><li>Control statements</li></a>
+                                <a href="arrays.html"><li>Arrays</li></a>
+                                <a href="strings.html"><li>Strings</li></a>
+                                <a href="pointers.html"><li>Pointers</li></a>
+                                <a href="functions.html"><li>Functions</li></a>
+                                <a href="structures.html"><li>Structures</li></a>
+                                <a href="unions.html"><li>Unions</li></a>
+                                <a href="enumerations.html"><li>Enumerations</li></a>
+                                <a href="oop.html"><li>object oriented programming</li></a>
+                                <a href="classes-and-objects.html"><li>classes and objects</li></a>
+                                <a href="special-member-functions.html"><li>Special member functions</li></a>
+                                <a href="function-overloading.html"><li>Function overloading</li></a>
+                                <a href="operator-overloading.html"><li>Operator overloading</li></a>
+                                <a href="inheritance.html"><li>Inheritance</li></a>
+                                <a href="polymorphisum.html"><li>Polymorphism and virtual function</li></a>
+                                <a href="templates.html"><li>Templates</li></a>
+                                <a href="exception-handling.html"><li>Exception handling</li></a>
+                                <a href="data-fil-operations.html"><li>Data file operations</li></a>
+                                <a href="stl.html"><li>STL</li></a>
+                                <h3>pratice in cpp</h3>
+                                <a href="questions.html"><li>Questions</li></a>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                        <div style="background-color: #e67e22;">
+                            <h1 style="margin-top: 0; padding: 6px;">static data member</h1>
+                        </div>
+                        <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                            <p>
+                                A data member of a class can be declared as static, the properties of a static member variables are similar to a C static variable. It is initialized to zero, when the first object of its class is created.  
+                            </p>
+                            <p>
+                                When a data member is declared as static, it can be accessed with the help of any one of the object of that class. In other words, a static data member is  commonly shared all the objects of the same class. 
+                            </p>
+                            <h4>note</h4>
+                            <p>
+                                The type and scope of each static member variable must be defined outside the class definition. This is necessary, because  static data members are stored separately rather than  as a part of an object. 
+                            </p>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#inclide&lt;conio.h&gt;</span>
+<span class="green">#inclide&lt;iomanip.h&gt;</span>
+<span class="green">using namespace</span> <span class="red">std;</span>
+<span class="blue">class</span> <span>num</span>
+<span class="red">{</span>
+  <span class="blue">private</span><span  class="red">:</span>
+    <span class="blue">static int</span> <span>n</span><span class="red">;</span>
+  <span class="blue">public</span><span class="red">:</span>
+    <span class="blue">void</span> <span>accept</span><span class="red">();</span>
+    <span class="blue">void</span> <span>disp</span><span class="red">();</span>
+<span class="red">};</span>
+<span class="blue">int</span> <span>num</span><span class="red">::</span><span>n</span><span class="red">;</span>
+<span class="blue">void</span><span> num</span><span class="red">::</span><span>accept</span><span class="red">()</span>
+<span class="red">{</span>
+  <span class="boldall">cin>></span><span>n</span><span class="red">;</span>
+<span class="red">}</span>
+<span class="blue">void</span><span> num</span><span class="red">::</span><span>disp</span><span class="red">()</span>
+<span class="red">{</span>
+  <span class="boldall">cout<<</span><span>n</span><span class="boldall"><<</span><span>endl</span><span class="red">;</span>
+<span class="red">}</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span>num nb1,nb2</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Initial value in the First Object :"</span><span class="red">;</span>
+  <span>nb1.disp()</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Initial value in the Second Object :"</span><span class="red">;</span>
+  <span>nb2.disp()</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Enter any value into First Object :"</span><span class="red">;</span>
+  <span>nb1.accept()</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Value in the First Object :"</span><span class="red">;</span>
+  <span>nb1.disp()</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Value in the Second Object :"</span><span class="red">;</span>
+  <span>nb2.disp()</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Enter any value into Second Object :"</span><span class="red">;</span>
+  <span>nb2.accept()</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Value in the First Object :"</span><span class="red">;</span>
+  <span>nb1.disp()</span><span class="red">;</span>
+  <span class="boldall">cout<<</span><span class="blue">"Value in the second Object :"</span><span class="red">;</span>
+  <span>nb2.disp()</span><span class="red">;</span>
+<span class="red">}</span>
+</pre>
+                            
+                            <div>
+                                <a href="special-member-functions.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                                <a href="special-member-functions.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-5 right-box">
+        
+                    </div>
+                </div>
+            </section>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="/java script/jquery.waypoints.min.js"></script>
+            <script src="/java script/jqueryforC.js"></script>
+    
+</body>
+</html>
