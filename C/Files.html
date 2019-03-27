@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Files</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li>Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li>Control statements</li></a>
+                            <a href="Functions.html"><li>Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li>Arrays</li></a>
+                            <a href="Strings.html"><li>Strings</li></a>
+                            <a href="Pointers.html"><li>Pointers</li></a>
+                            <a href="Structures.html"><li>Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li style="background-color: rgb(214,214,214)">Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                    <div style="background-color: #e67e22;">
+                        <h1 style="margin-top: 0; padding: 6px;">files</h1>
+                    </div>
+                    <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                        <p>
+                            C language permits the usage of limited input and output functions to read and write data. These functions are used for only smaller volumes of data and it becomes difficult to handle longer data volumes. Also the entire data is lost when the program over.
+                            To overcome these difficulties a flexible method was developed by employing the concept of files to store, to read and write data and to return them even when the program over.
+                        </p>
+                        <h4>Definition</h4>
+                        <p>
+                                A file is one, which enable the user to store, to read and write a group of related data. <br>
+                                (or) <br>
+                                A file is a collection of records .
+                        </p>
+                        <p>
+                            C supports a number of functions to have the ability to perform the basic file operations, which include :
+                            <div class="padding-ul ol">
+                                <ol>
+                                    <li>naming a file</li>
+                                    <li>opening a file</li>
+                                    <li>reading data from file</li>
+                                    <li>writing data to file</li>
+                                    <li>closing a file</li>
+                                </ol>
+                            </div>
+                        </p>
+                        <h4>types of files</h4>
+                        <p>
+                            Files are two types, Namely 
+                            <div class="padding-ul ol">
+                                <ol>
+                                    <li>Text files (or)  Sequential files</li>
+                                    <li>Binary files</li>
+                                </ol>
+                            </div>
+                        </p>
+                        <h4>Text files</h4>
+                        <p>
+                                Used for reading and writing data in the form of characters. The memory size of each and every character is 1 byte. 
+                        </p>
+                        <h4>Binary files </h4>
+                        <p>
+                            Used for reading and writing data in the form of data blocks. The memory size of each and every data block depends on its data type 
+                        </p>
+                        <h4>file</h4>
+                        <p>
+                                It is a pre-defined structure and is used to declare a file pointer. Using this pointer, we can perform all file operations. 
+                        </p>
+                        <h4>Declaration of FILE pointer </h4>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span class="blue">FILE</span> <span>*identifier</span><span class="red">;</span>
+</pre>
+<p>Eg:</p>
+<pre class="compiler">
+<span class="blue">FILE</span> <span>*fp</span><span class="red">;</span>
+</pre>
+                        <h4>File  handling functions</h4>
+                        <p>fopen :  It opens a fil</p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>FILE *fopen(const char *filename , const char *mode);</span>
+</pre>
+                        <p>
+                                Filename :  file that the function opens
+                        </p>
+                        <h4>mode string</h4>
+                        <p>
+                            There are various modes and are described in the following   table. 
+                        </p>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th style="width: 25%">string</th>
+                                    <th style="width: 75%">description</th>
+                                </tr>
+                                <tr>
+                                    <td style="width: 25%;">r</td>
+                                    <td style="width: 75%">open for reading only</td>
+                                </tr>
+                                <tr>
+                                    <td>w</td>
+                                    <td>Create for writing.
+                                            If a file by that name already exists, it will be overwritten</td>
+                                </tr>
+                                <tr>
+                                    <td>a</td>
+                                    <td>Append :
+                                        open for writing at end of file, or create for writing if the file does not exist.</td>
+                                </tr>
+                                <tr>
+                                    <td>r+</td>
+                                    <td>Open an existing file for update (reading and writing)</td>
+                                </tr>
+                                <tr>
+                                    <td>w+</td>
+                                    <td>Create a new file for update (writing and reading ).
+                                        If a file by that name already exists, it will be overwritten</td>
+                                </tr>
+                                <tr>
+                                    <td>a+</td>
+                                    <td>
+                                            Open for append :
+                                            open for update (writing and reading ).
+                                            at the end of the file, or create if the file does not exist 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                                To specify that a given file is being opened or created in text mode, append "t" to the string (rt, w+t, etc.).
+
+                                To specify binary mode, append "b" to the string (wb, a+b, etc.).
+                        </p>
+                        <h4>fclose</h4>
+                        <p>It closes a file</p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>int fclose(FILE *fp);</span>
+</pre>
+                        <h4>fcloseall</h4>
+                        <p>It closes all open files</p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>int fcloseall();</span>
+</pre>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">FILE</span> <span>*fp</span><span class="red">;</span>
+  <span>fp=fopen("a.txt","w")</span><span class="red">;</span>
+  <span class="blue">if</span></span><span class="red">(</span><span>fp==NULL</span></span><span class="red">)</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Unable to open a file"</span><span class="red">);</span> 
+  <span class="blue">else</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"File is opened"</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <p>
+                            If we specify the mode "a", we will get the same output (i.e. File is opened), if we specify the mode “r”, we will get the output as Unable to open a file 
+                        </p>
+                        <h4>Textfile operations</h4>
+                        <h4>getc</h4>
+                        <p>It is a macro that gets one character from a file.</p>
+                        <h4>syntax</h4>
+                        <p>int getc(FILE *stream);</p>
+                        <h4>putc</h4>
+                        <p>It is a macro that outputs a character to a file</p>
+                        <h4>syntax</h4>
+                        <p>int putc( int c,FILE *stream);</p>
+                        <h4>fgetc</h4>
+                        <p>It is a function that gets one character from a file stream.</p>
+                        <h4>syntax</h4>
+                        <p> int fgetc(FILE  *stream);</p>
+                        <h4>fputc</h4>
+                        <p>It is a function that outputs a character to a file stream.</p>
+                        <h4>syntax</h4>
+                        <p>int fputc(int c,FILE *stream);</p>
+                        <h4>EOF</h4>
+                        <p>
+                            It is a constant indicating that end of file has been reached on a File. 
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>rewind</h4>
+                        <p>rewind() repositions file pointer to file stream’s beginning</p>
+                        <h4>syntax</h4>
+                        <p>void rewind(FILE *stream);</p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>fgets</h4>
+                        <p>It gets a string from file</p>
+                        <h4>syntax</h4>
+                        <p>char *   fgets(char *s,int n,FILE *stream);</p>
+                        <p>
+                            fgets reads characters from file stream into the string s. it stops when it reads either n-1 characters or a new line character which ever comes first  
+                        </p>
+                        <h4>fputs</h4>
+                        <p>It outputs a string to a file stream.</p>
+                        <h4>syntax</h4>
+                        <p>char * fputs(char *s,FILE *stream);</p>
+                        <p>
+                            fputs copies the null terminated string s to the given output file stream. It doesnot append a new line character and the terminating null character is not copied.
+                        </p>
+                        <h4>feof</h4>
+                        <p>
+                            It is a macro that tests if end of file has been reached on a file 
+                        </p>
+                        <h4>syntax</h4>
+                        <p>int   feof(FILE *stream);</p>
+                        <h4>return value</h4>
+                        <p>
+                                Returns non zero if an end of file indicator was detected on the last input operation on the named stream.
+                                Returns 0 if end of file has not been reached.
+                        </p>
+                        <pre>
+                            <code>
+                                <div class="compiler">
+
+                                </div>
+                            </code>
+                        </pre>
+                        <h4>fprintf</h4>
+                        <p>It sends formatted output to a file stream.</p>
+                        <h4>syntax</h4>
+                        <p>int  fprintf(FILE *stream , const char *format [,argument,…...]);</p>
+                        <h4>fscanf</h4>
+                        <p>It scans and formats input from a file stream.</p>
+                        <h4>syntax</h4>
+                        <p>nt fscanf(FILE *stream,const char *format [,address,…...])</p>
+                        <h4>note</h4>
+                        <p>
+                            In fprintf and fscanf, between formats at least one space is necessary. 
+                        </p>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>ftell</h4>
+                        <p>It returns the current file pointer position</p>
+                        <h4>syntax</h4>
+                        <p>long   ftell(FILE *stream);</p>
+                        <h4>fseek</h4>
+                        <p>It repositions the file pointer of a filestream</p>
+                        <h4>syntax</h4>
+                        <p>
+                            int   fseek(FILE *stream, long offset, int whence); 
+                        </p>
+                        <h4>stream</h4>
+                        <p>Whose file pointer fseek sets</p>
+                        <h4>offset</h4>
+                        <p>Difference in bytes between whence and new 
+                                position.</p>
+                        <h4>whence</h4>
+                        <p>
+                            One of three SEEK_xxx file pointer locations (0, 1, and 2) 
+                        </p>
+                        <hr>
+                    </div>
+                    <div>
+                            <a href="Dynamic-memory-allocation.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                            <a href="preprocessor.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+        </section>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

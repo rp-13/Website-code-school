@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Structures</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li>Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li>Control statements</li></a>
+                            <a href="Functions.html"><li>Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li>Arrays</li></a>
+                            <a href="Strings.html"><li>Strings</li></a>
+                            <a href="Pointers.html"><li>Pointers</li></a>
+                            <a href="Structures.html"><li style="background-color: rgb(214,214,214)">Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li>Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                    <div style="background-color: #e67e22;">
+                        <h1 style="margin-top: 0; padding: 6px;">structures</h1>
+                    </div>
+                    <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                        <p>
+                                We have seen that arrays can be used to represent a group of data items that belongs to same data type. If we want to represent a
+                                 collection of data items of different data types using a single name, then we cannot use an array. C supports a constructed data type known as
+                                  Structure, which is a method for packing data of different data types.
+                                A structure is a convenient tool for handling a group of logically related data items. 
+                                Structures help to organize complex data in a more meaningful way. It is a powerful concept
+                                 that we may often need to use in our program design. 
+                        </p>
+                        <h4>definition</h4>
+                        <p>
+                             A group of data items that belongs to different data types is known as  Structure. 
+                        </p>
+                        <h4>struct</h4>
+                        <p>It is a keyword and is used to declare a Structure</p>
+                        <h4>declaration</h4>
+<pre class="compiler">
+<span>struct   struct_name </span>
+<span class="red">{</span>
+  <span>data item-1; </span>
+  <span>data item-2;</span>
+  <span>…………</span>
+  <span>data item-n;</span>
+<span class="red">}</span><span>[var_list]</span><span class="red">;</span>
+</pre>
+                        <p>
+                                Eg : <br>
+                                struct emp <br>
+                                { <br>
+                                      int eno; <br>
+                                      char ename[20]; <br>
+                                      float sal; <br>
+                                  }e; (or) e1,e2,...,en; <br>
+                        </p>
+                        <h4>Declaration of structure variable</h4>
+<pre class="compiler">
+<span>struct  struct_name  identifier;</span>
+<span>(or)</span>
+<span>struct struct_name dentifier-1,identifier-2,.......,identifier-n;</span>
+</pre>
+                        <p>
+                                Eg: <br>
+                                struct emp e; <br>
+                                    (or) <br>
+                              struct emp e1,e2,..,en; <br>
+                        </p>
+                        <h4>.   (Access operator)</h4>
+                        <p>
+                            It is used to access the data items of a structure with the help of structure variable 
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>struct_variable  .dataitem;</span>
+</pre>
+                        <p>
+                                Eg: <br>
+                                e.eno; <br>
+                                e.ename; <br>
+                                e.sal;   <br> 
+                        </p>
+                        <h4>Initialization</h4>
+<pre class="compiler">
+<span>struct struct_name</span>
+<span>{</span>
+  <span>data item-1;</span>
+  <span>data item-2;</span>
+  <span>…………</span>
+  <span>data item-n;</span>
+<span>}</span><span>identifier={value-1,value-2,..,value-n};</span>
+</pre>
+                        <p>
+                                Eg : <br>
+                                struct emp <br>
+                                { <br>
+                                      int eno; <br>
+                                      char ename[20]; <br>
+                                      float sal; <br>
+                                 } e = {100,"HHHH",20000.00}; <br>
+                        
+                          
+                        struct  struct_name identifier = {value-1,value-2,……value-n}; <br>
+                        struct emp e = {100,"HHHH",20000.00}; <br>
+                        </p>
+                        <h4>To initialize a structure and display its data</h4>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>   
+<span class="blue">struct</span> <span class="boldall">emp</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>eno</span><span class="red">;</span>
+  <span class="blue">char</span> <span>enmae[20]</span><span class="red">;</span>
+  <span class="blue">float</span> <span>sal</span><span class="red">;</span>
+<span class="red">}</span>  <span>e=</span><span class="red">{</span><span>1,"RRRR",10000.00</span><span class="red">};</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nEmp number  : %d",e.eno</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nEmp name    : %s",e.ename</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nSalary      : %.2f",e.sal</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>1</span>
+<span>RRRR</span>
+<span>10000.00</span>
+</pre>
+                    <h4>Array of Structures</h4>
+                    <p>
+                        Like any other data type, structure arrays can be defined, so that each array element can
+                         be of structure data type. 
+                    </p>
+                    <strong>For Example</strong>
+                    <p>struct student s[100];</p>
+                    <p>which defines an array called s, that contains 100 elements, each element is defined to be of type <strong>struct student</strong></p>
+                    <h4>code</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                    <h4>Passing structure as function argument(or) parameter</h4>
+                    <p>Like any other data type a structure may also be used as function argument.</p>
+                    <h4>Returning structure</h4>
+                    <p>A function can,  not only receive a structure as its argument, but also can return them.</p>
+                    <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>   
+<span class="blue">struct</span> <span class="boldall">num</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>n</span><span class="red">;</span>
+<span class="red">}</span>
+<span class="blue">struct</span> <span class="boldall">num accept()</span>
+<span class="red">{</span>
+  <span class="blue">struct</span> <span class="boldall">num</span> <span>x</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter any Number :"</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"%d",&x.n</span><span class="red">);</span>
+  <span class="blue">return</span> <span>x</span><span class="red">;</span>
+<span class="red">}</span> 
+  <span class="blue">void</span> <span class="boldall">disp</span><span class="red">(</span><span class="blue">struct</span> <span class="boldall">num</span><span> x</span><span class="red">)</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Given Number :%d",x.n</span><span class="red">);</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">struct</span> <span>num nb</span><span class="red">;</span>
+  <span>nb=accept()</span>
+  <span>disp(nb)</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                    <h4>Pointers and Structures </h4>
+                    <p>A pointer can also point to a structure.</p>
+                    <p>
+                            For example :  <br>
+
+                            struct student <br>
+                            {   <br>
+                                   int sno;   <br>
+                                   char sname[20], course[20]; <br>
+                                   float fee; <br>
+                             }; <br>
+                       
+                           struct student s; <br>
+                           struct student *p; <br>
+                    </p>
+<pre class="compiler">
+struct student 
+{ 
+  int sno;   
+  char sname[20], course[20]; 
+  float fee; 
+};
+struct student s; 
+struct student *p; 
+</pre>
+                    <p>
+                        Here p is defined to be a pointer, pointing to student structure, 
+                        we can write <br>
+                        p = &s;
+                    </p>
+                    <p>
+                        After making such an assignment we can access every data item of 
+                        student  structure through  p .
+                    </p>
+                    <p>->(Arrow)</p>
+                    <p>-> is the combination of  -  followed by  > </p>
+                    <p>It is used to access the data items of a structure with the help of structure pointer.
+                            syntax: <br>
+                                   Struct_pointer  -> data item; <br>
+                                 Eg:   <br>
+                                      p-> sno; <br>
+                                      p-> sname; <br>
+                                      p-> course; <br>
+                                      p-> fee;	<br>
+                    </p>
+                    <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>   
+<span class="blue">struct</span> <span class="boldall">student</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>sno</span><span class="red">;</span>
+  <span class="blue">char</span> <span>sname[20],course[20]</span><span class="red">;</span>
+  <span class="blue">float</span> <span>fee</span><span class="red">;</span>
+<span class="red">};</span>  
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">struct</span> <span class="boldall">student</span> <span>s</span><span class="red">;</span>
+  <span class="blue">struct</span> <span class="boldall">student</span> <span>*p</span><span class="red">;</span>
+  <span class="blue">float</span> <span>*f,f1</span><span class="red">;</span>
+  <span>f=&f1</span><span class="red">;</span>
+  <span>*f=f1</span><span class="red">;</span>
+  <span>p=&s</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter Studet Number :"</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue">"%d",&p->sno</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter Studet Name :"</span><span class="red">);</span>
+  <span>fflush(stdin)</span><span class="red">;</span>
+  <span>gets(p->sname)</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter Course   :"</span><span class="red">);</span>
+  <span>gets(p->course)</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter  Fees  :"</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue">"%f",&p->fee</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nStudent Number  :%d",p->sno</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nStudent Name    :%s",p->sname</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nCourse          :%s",p->course</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nFees            :%.2f",p->fee</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                    <h4>structures and dynamic memory allocation</h4>
+                    <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>   
+<span class="blue">struct</span> <span class="boldall">student</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>sno</span><span class="red">;</span>
+  <span class="blue">char</span> <span>sname[20],course[20]</span><span class="red">;</span>
+  <span class="blue">float</span> <span>fee</span><span class="red">;</span>
+<span class="red">};</span>  
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">struct</span> <span class="boldall">student</span> <span>*p</span><span class="red">;</span>
+  <span class="blue">float</span> <span>*f,f1</span><span class="red">;</span>
+  <span>f=&f1</span><span class="red">;</span>
+  <span>*f=f1</span><span class="red">;</span>
+  <span>p=</span><span class="red">(</span><span class="blue">struct</span> <span>student *</span><span class="red">)</span><span class="blue">malloc</span><span class="red">(</span>sizeofstruct student<span class="red">)</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter Studet Number :"</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue">"%d",&p->sno</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter Studet Name :"</span><span class="red">);</span>
+  <span>fflush(stdin)</span><span class="red">;</span>
+  <span>gets(p->sname)</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter Course   :"</span><span class="red">);</span>
+  <span>gets(p->course)</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter  Fees  :"</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue">"%f",&p->fee</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nStudent Number  :%d",p->sno</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nStudent Name    :%s",p->sname</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nCourse          :%s",p->course</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nFees            :%.2f",p->fee</span><span class="red">);</span>
+  <span>free(p)</span><span class="red">;</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+    <hr>
+                    </div>
+                    <div>
+                            <a href="Pointers.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                            <a href="Unions.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+        </section>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

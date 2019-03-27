@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strings</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li>Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li>Control statements</li></a>
+                            <a href="Functions.html"><li>Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li>Arrays</li></a>
+                            <a href="Strings.html"><li style="background-color: rgb(214,214,214)">Strings</li></a>
+                            <a href="Pointers.html"><li>Pointers</li></a>
+                            <a href="Structures.html"><li>Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li>Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                    <div style="background-color: #e67e22;">
+                        <h1 style="margin-top: 0; padding: 6px;">strings</h1>
+                    </div>
+                    <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                        <p>
+                            A group of characters defined between double quotation marks   is a string. 
+                            It is a constant string ,But in C language, a string variable is nothing but
+                             an array of characters and terminated by a null character (\0). 
+                        </p>
+                        <h4>Declaration </h4>
+                        <p>char   identifier [size] ; <br>
+                                Eg :  char st[20] ; <br> 
+                        </p>
+                        <h4>Initialization </h4>
+                        <p>
+                            At the time of declaring a string variable we can store a constant 
+                            string into that variable is called as initialization of a string. 
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>char identifier[size] = "string";</span>
+</pre>
+                        <p>Eg :  char st[10] = "WELCOME"; <br>
+                                char str[ ] = "ABCD" ;</p>
+                        <h4>note</h4>
+                        <p>
+                            The compiler assigns a constant string to a string variable, it automatically supplies a null character (\0)at the end of a string. Therefore the size should be equal to number  of characters in the string  plus 1.
+                            In C language, string initialization is possible, but string assigning is not possible. 
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">char</span> <span>st[10]=</span><span class="red">"</span><span>WELCOME</span><span class="red">";</span>
+  <span class="blue">char</span> <span>str[]=</span><span class="red">"</span><span>ABCD</span><span class="red">";</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"st = %s",st</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\nstr = %s",str</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+                        <h4>output</h4>
+<pre class="compiler">
+<span>st = WELCOME</span>
+<span>str = ABCD</span>
+</pre>
+                        <h4>gets</h4>
+                        <p>It gets a string from stdin.</p>
+                        <h4>syntax</h4>
+<pre  class="compiler">
+<span>char *  gets(char  *s);</span>
+</pre>
+                        <p>
+                                Eg : <br>
+                                    1)  gets(st); <br>
+                                    2)  gets(“welcome”);   ->  not possible <br>
+                        </p>
+                        <h4>puts </h4>
+                        <p>
+                            It outputs a string to stdout(Monitor) and appends a new line character. 
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>char *  puts(const char *s);</span>
+</pre>
+                        <p>
+                                Eg : <br>
+
+                                1)  puts(st); <br>
+                                2)  puts("welcome");    ->  possible <br>
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>   
+  <span class="blue">char</span> <span>st[20]</span><span class="red">;</span>
+  <span class="boldall">puts</span><span class="red">(</span><span class="blue"></span>"Enter a String : "</span><span class="red">);</span>
+  <span class="boldall">gets</span><span class="red">(</span><span>st</span><span class="red">);</span>
+  <span class="boldall">puts</span><span class="red">(</span><span class="blue"></span>st</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Enter a String : welcome</span>
+<span>welcome</span>
+</pre>
+                        <h4>getch</h4>
+                        <p>It gets a character from the console but doesnot echo (print) to the screen</p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>int  getch();</span>
+</pre>
+                        <h4>getche</h4>
+                        <p>It gets a character from the console and echoes to the screen.</p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>int  getche();</span>
+</pre>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>   
+  <span class="blue">char</span> <span>ch,che</span><span class="red">;</span>  
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter first character  : "</span><span class="red">);</span>
+  <span>ch=getch();</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter second character : "</span><span class="red">);</span>
+  <span>che=getche();</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"First character  : %c \n"ch</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Second character : %c"che</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Enter first character  : r</span>
+<span>Enter second character  : p</span>
+<span>First character  : r</span>
+<span>Second character : p</span>
+</pre>
+                        <h4>note</h4>
+                        <p>No need to press enter key after entering a character.</p>
+                        <h4>getchar</h4>
+                        <p>It is a macro that gets a character from stdin.</p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>int getchar();</span>
+</pre>
+                        <h4>putchar </h4>
+                        <p>It is a macro that outputs a character on stdout.</p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>int putchar(int  c);</span>
+</pre>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">char</span> <span>ch</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter a character  : "</span><span class="red">);</span>
+  <span>ch=getchar();</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Given character : "</span><span class="red">);</span>
+  <span>putchar(ch);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>String handling functions</h4>
+                        <p>
+                                These are included in the header file   <string.h> 
+                        </p>
+                        <h4>strlen</h4>
+                        <p>It calculates length of given string</p>
+                        <h4>syntax</h4>
+                        <p>size_t    strlen(const   char   *s);</p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="green">#include&lt;string.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>len</span><span class="red">;</span>
+  <span class="blue">char</span> <span>s[20]</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter a string : "</span><span class="red">);</span>
+  <span>gets(s);</span>
+  <span>len=strlen(s);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Length of given string : %d",len</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>Two dimensional character arrays (String array) </h4>
+                        <p>
+                                A list of strings can be treated as a table of strings and a two dimensional character array can be used to store the entire list. <br>
+                                For example : <br>
+                                char st[20][20] may be used to store a list of 20 strings, each of length not more than 20 characters. <br>
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">char</span> <span>st[20][20]</span><span class="red">;</span>
+  <span class="blue">int</span> <span>n,i</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter number of strings : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue"></span>"%d",&n</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter %d strings : ",n</span><span class="red">);</span>
+  <span>fflush(stdin)</span><span class="red">;</span>
+  <span class="blue">for</span><span class="red">(</span><span>i=0;i< n;i++</span><span class="red">)</span>
+  <span class="red">{</span>
+    <span class="blue">gets</span><span class="red">(</span><span>st[i]</span><span class="red">);</span>
+  <span class="red">}</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\nGiven strings : "</span><span class="red">);</span>
+  <span class="blue">for</span><span class="red">(</span><span>i=0;i< n;i++</span><span class="red">)</span>
+  <span class="red">{</span>
+    <span class="blue">puts</span><span class="red">(</span><span>st[i]</span><span class="red">);</span>
+  <span class="red">}</span>
+<span class="red">}</span>
+</pre>
+    <h4>output</h4>
+<pre class="compiler">
+<span>Enter number of strings : 2</span>
+<span>Enter 2 strings :</span>
+<span>welcome</span>
+<span>codetocook</span>
+<span>Given strings :</span>
+<span>welcome</span>
+<span>codetocook</span>
+</pre>
+    <hr>
+                    </div>
+                    <div>
+                            <a href="Arrays.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                            <a href="Pointers.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+        </section>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Storege classes</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li style="background-color: rgb(214,214,214)">Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li>Control statements</li></a>
+                            <a href="Functions.html"><li>Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li>Arrays</li></a>
+                            <a href="Strings.html"><li>Strings</li></a>
+                            <a href="Pointers.html"><li>Pointers</li></a>
+                            <a href="Structures.html"><li>Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li>Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                    <div style="background-color: #e67e22;">
+                        <h1 style="margin-top: 0; padding: 6px;">storege classes</h1>
+                    </div>
+                    <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                        <p>
+                            By the declaration statement the memory is allocated temporarily for all the variables. The size of memory varies with respect to the type of the variable. The availability of the variables for access depends on its declaration type.
+                            The storage class specifiers are used to specify the life and scope of   the  variables with in blocks, functions and the entire program.
+                         
+                            There are 4 types of storage classes supported by C language. Namely 
+                        </p>
+                        <div class="padding-ul ol">
+                            <ol>
+                                <li>automatic variables</li>
+                                <li>static variables</li>
+                                <li>external (or) global variables</li>
+                                <li>register variables</li>
+                            </ol>
+                        </div> <br>
+                        <h4>automatic variables</h4>
+                        <p>
+                            These variables are declared inside a function block.If there is no storage class specifier before the declaration of any variable inside a function block, by default it takes auto storage class. 
+                        </p>
+                        <table class="table table-border">
+                            <tbody>
+                                <tr>
+                                    <th style="width: 25%;">Storage</th>
+                                    <td style="width: 75%;">main memory</td>
+                                </tr>
+                                <tr>
+                                    <th>Default value</th>
+                                    <td>garbage value</td>
+                                </tr>
+                                <tr>
+                                    <th>Scope</th>
+                                    <td>Local to the block in which it is defined</td>
+                                </tr>
+                                <tr>
+                                    <th>Life</th>
+                                    <td>Till the control remains within the 
+                                        block in which it is defined </td>
+                                </tr>
+                                <tr>
+                                    <th>Keyword</th>
+                                    <td>auto</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>   
+<span class="green">#include&lt;conio.h&gt;</span>      
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">auto int</span> <span>a,b</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\na = %d",a</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nb = %d",b</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+                        <h4>static variables </h4>
+                        <p>
+                            The memory of static variables remains unchanged until the end of the program. 
+                        </p>
+                        <table class="table table-border">
+                                <tbody>
+                                    <tr>
+                                        <th style="width: 25%;">Storage</th>
+                                        <td style="width: 75%;">main memory</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Default value</th>
+                                        <td>zero</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Scope</th>
+                                        <td>Local to the block in which it is defined</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Life</th>
+                                        <td style="text-align: justify;">The value of static variable persists between
+                                                different function calls, that means  
+                                                it  cannot reinitialize between the 
+                                                 different function calls </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Keyword</th>
+                                        <td>static</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>   
+<span class="green">#include&lt;conio.h&gt;</span>      
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">static int</span> <span>a,b</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\na = %d",a</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nb = %d",b</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+                            <h4>external (or) global variables</h4>
+                            <p>
+                                The variables that are both alive and active throughout the entire program are known as global variables. 
+                            </p>
+                            <table class="table table-border">
+                                    <tbody>
+                                        <tr>
+                                            <th style="width: 25%;">Storage</th>
+                                            <td style="width: 75%;">main memory</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Default value</th>
+                                            <td>zero</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Scope</th>
+                                            <td>global</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Life</th>
+                                            <td>As long as the program execution doesnot 
+                                                come to end.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Keyword</th>
+                                            <td>extern</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>   
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">int</span> <span>a,b</span><span class="red">;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\na = %d",a</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nb = %d",b</span><span class="red">);</span>
+<span class="red">}</span>    
+</pre>
+                                <h4>note</h4>
+                                <p>
+                                    Without the keyword <b class="boldall">extern</b> in main() block, we will get garbage values of a.  This is because a becomes local to <b class="boldall">main()</b>.
+                                </p>
+                            <h4>Register variables</h4>
+                            <p>
+                                We can use register variables for frequently used variables to improve the faster execution of program. These variables are also declared inside a function block.
+                            </p>
+                            <table class="table table-border">
+                                    <tbody>
+                                        <tr>
+                                            <th style="width: 25%;">Storage</th>
+                                            <td style="width: 75%;">main memory</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Default value</th>
+                                            <td>Garbage value</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Scope</th>
+                                            <td>Local to the block in which it is 
+                                                    defined </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Life</th>
+                                            <td>Till the control within the block in which it is 
+                                                    defined</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Keyword</th>
+                                            <td> register</td>
+                                        </tr>
+                                    </tbody>
+                            </table>
+                            <h4>note</h4>
+                            <p>It supports only integral data type (int and char)</p>
+                            <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>   
+<span class="green">#include&lt;conio.h&gt;</span>      
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">register int</span> <span>a,b</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\na = %d",a</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nb = %d",b</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+                            <hr>
+                    </div>
+                    <div>
+                            <a href="Constants.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                            <a href="Type-casting.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+        </section>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

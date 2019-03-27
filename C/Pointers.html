@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pointers</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li>Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li>Control statements</li></a>
+                            <a href="Functions.html"><li>Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li>Arrays</li></a>
+                            <a href="Strings.html"><li>Strings</li></a>
+                            <a href="Pointers.html"><li style="background-color: rgb(214,214,214)">Pointers</li></a>
+                            <a href="Structures.html"><li>Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li>Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                    <div style="background-color: #e67e22;">
+                        <h1 style="margin-top: 0; padding: 6px;">pointers</h1>
+                    </div>
+                    <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                        <p>
+                            C provides the important feature of data manipulations with the address of the
+                             variables. Hence the execution time is very much reduced. Such concept is
+                              possible with the special data type called pointers
+                        </p>
+                        <h4>definition</h4>
+                        <p>
+                            A pointer is a variable which stores the address of anothe`r variable. 
+                        </p>
+                        <h4>declaration</h4>
+                        <p>
+                             Pointer declaration is similar to normal variable but preceded   by  * symbol
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>datatype *identifier;</span>
+</pre>
+                        <p>
+                                eg: <br>
+                                        int  *p; <br>
+                                        char  *ch1,*ch2; <br>
+                                         int x,y,z,*p; <br>
+                        </p>
+                        <h4>Initialization</h4>
+                        <p>
+                            At the time of declaring a pointer, we can store some address into
+                             that pointer is called as initialization of pointer.
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>datatype *identifier = address;</span>
+</pre>
+                        <h4>example</h4>
+                        <p>
+                                int a;     <br>                   
+                                int  *p = &a <br>
+                        </p>
+                        <h4>Assigning Address to a pointer</h4>
+                        <p>
+                                datatype   *identifier; <br>
+                                identifier=Address; <br>
+                             eg:  <br>
+                             int *p; <br>
+                              int a; <br>
+                             p=&a;
+                        </p>
+                        <h4>void * </h4>
+                        <p>
+                                It is a generic pointer, it refers the address of any type of variable and also it will convert to any type of pointer. <br>
+                                eg: <br>
+                                       void  *p;   <br>
+                        </p>
+                        <h4>NULL</h4>
+                        <p>Null pointer value (empty address)</p>
+                        <h4>note</h4>
+                        <p>
+                            Any type of pointer, it allocates only 2 bytes of memory ,Because it stores the
+                             address of memory location. In C language the memory address is in  unsigned 
+                             integer. (2 bytes for unsigned int, in the range of 0 to 65535)
+
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span class="red">*</span><span>p1</span><span class="red">;</span>
+  <span class="blue">char</span> <span class="red">*</span><span>p2</span><span class="red">;</span>
+  <span class="blue">float</span> <span class="red">*</span><span>p3</span><span class="red">;</span>
+  <span class="blue">double</span> <span class="red">*</span><span>p4</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"size of int pointer    = %d bytes",sizeof(p1)</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\nsize of char pointer   = %d bytes",sizeof(p2)</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\nsize of float pointer  = %d bytes",sizeof(p3)</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\nsize of double pointer = %d bytes",sizeof(p4)</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>Accessing pointers</h4>
+                        <p>
+                                int a=100;                         int a=100;
+                                int *p=&a;           (or)            int *p;
+                                                                               p = &a;
+                                                           
+                                
+                                
+                                
+                                              a - 100                  *p - 100
+                                             &a - 5000                  p - 5000
+                                                a = 200 
+                                                *p=200
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>a=100</span><span class="red">;</span>
+  <span class="blue">int</span> <span>*p=&n</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"value of a = %d",a</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\naddress of a = %lu",&a</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\nvalue of a using p = %d",*p</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\naddress of a using p = %lu",p</span><span class="red">);</span>
+  <span>n=200</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\n *p = %d",*p</span><span class="red">);</span>
+  <span>*p=300</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\n a = %d",a</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>Pointers and Functions</h4>
+                        <h4>Calling mechanism of argument function (or) Parameter passing techniques</h4>
+                        <div class="padding-ul ol">
+                            <ol>
+                                <li>Call by value (or) Pass by value</li>
+                                <li>Call by reference (or) Pass by reference.</li>
+                            </ol>
+                        </div>
+                        <h4>Call by value </h4>
+                        <p>
+                            The process of passing the value to the function call is known as call by value. 
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">void</span> <span class="boldall">fun(int)</span><span class="red">;</span>
+  <span>fun(100)</span><span class="red">;</span>
+<span class="red">}</span>  
+<span class="blue">void</span> <span class="boldall">fun(int x)</span>
+<span class="red">{</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"%d",x</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>Call by reference</h4>
+                        <p>
+                            The process of calling a function using pointers to pass the address of 
+                            the variables is called as call by reference. 
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">void</span> <span class="boldall">setdata(int *)</span><span class="red">;</span> 
+  <span class="blue">int</span> <span>a</span><span class="red">;</span>
+  <span>setdata(&a)</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"a=%d",a</span><span class="red">);</span>
+<span class="red">}</span>
+<span class="blue">void</span> <span class="boldall">setdata(int *p)</span>
+<span class="red">{</span>
+  <span>*p=100</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>Pointers and Arrays</h4>
+                        <p>
+                            When an array is declared, the compiler allocates a base address 
+                            and sufficient amount of storage to contain all the elements of
+                             array in continuous memory locations. The base address is the 
+                             location of the first element (index = 0 ) of the array. The
+                              compiler also defines the array name as a constant pointer to the
+                               first element. 
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>  
+  <span class="blue">int</span> <span>a[5]</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Base address : %u",&a[0]</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\nBase address : %u",a</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <p>
+                                Suppose we declare an array a as follows :- <br>
+                                int a[5] = {1,2,3,4,5}; <br>
+                    Suppose the base address of a=1000 and each integer requires 2 bytes of memory,the 5 elements will be stored as follows :-
+                        </p>
+                        <p>
+                                The name 'a' is defined as a constant pointer pointing to the first element a[0] and therefore the value of a is 1000, the location where a[0] is stored.
+                                Hence  a= &a[0] = 1000 
+                        </p>
+                        <p>
+                            
+                      If we declare p as an integer pointer, then we can make the pointer p to point
+                      to the array a by the following assignment.
+                        </p>
+                        <p>
+                                int *p; <br>
+                                p = a ;  (or)  p = &a[0]; <br>
+                          
+                          
+                              Now we can access every element of a using p++ or p+0, p+1, ….. to move one element to another. The relationship between p and a is shown below. <br>
+                            
+                                     p+0 = &a[0] = 1000 <br>
+                                     p+1 = &a[1] = 1002 <br>
+                                     p+2 = &a[2] = 1004 <br>
+                                     p+3 = &a[3] = 1006 <br>
+                                     p+4 = &a[4] = 1008 <br>
+                                     When handling arrays instead of using array index we can use pointers to access array elements. <br>
+                       Note that <br>
+ *(p+i) gives the value of a[i].    <br>      
+
+   To get the values of array elements : <br>
+          *( p+0) = a[0] = 1 <br>
+           *(p+1) = a[1] = 2 <br>
+           *(p+2)= a[2] = 3 <br>
+           *(p+3)= a[3] = 4 <br>
+           *(p+4) = a[4] = 5 <br>
+                        </p>
+                        <h4>note</h4>
+                        <p>
+                            The pointer accessing method is much faster than array indexing. 
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>a[20],n,i,*p</span><span class="red">;</span>
+  <span>p=a</span> <span> // p=&a[0]</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter number of elements : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue"></span>"%d",&n</span><span class="red">);</span>  
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter array elements : "</span><span class="red">);</span>
+  <span class="blue">for</span><span class="red">(</span><span>i=0;i< n;i++</span><span class="red">)</span>
+    <span class="red">{</span>
+      <span class="boldall">scanf</span><span class="red">(</span><span class="blue"></span>"%d",(p+i)</span><span class="red">);</span>
+    <span class="red">}</span>
+    <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\nGiven array elements : "</span><span class="red">);</span>
+    <span class="red">{</span> 
+      <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"%d\t",*(p+i)</span><span class="red">);</span>
+    <span class="red">}</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>Pointers and Strings</h4>
+                        <p>A pointer can also point to a string .
+                        </p> 
+                        <h4>code</h4>   
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">char</span> <span>*st</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter a String : "</span><span class="red">);</span>
+  <span>gets(st)</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Given String : %s",st</span><span class="red">);</span>
+<span class="red">}</span>
+</pre> 
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>  
+                        <p>
+                                We need not specify the size of String, the compiler 
+                                automatically allocates sufficient amount of memory 
+                        </p>                     
+                        <hr>
+                    </div>
+                    <div>
+                            <a href="Strings.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                            <a href="Structures.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+        </section>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

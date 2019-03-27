@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+    <header>
+            <nav class="sticky">
+                <div class="row">
+                        <img src="/images/logo.png" alt="Logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="/languages.html">LANGUAGES</a></li>
+                        <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                        <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                        <li><a href="/Gate.html">GATE</a></li>
+                        <li><a href="#">SEARCH</a></li>
+                        <li><a href="/Login.html">LOGIN</a></li>
+                    </ul>
+                    <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                    <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                </div>
+            </nav>
+    </header>
+    <section>
+        <div class="row">
+            <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                <nav class="nav1">
+                    <ul>
+                        <h3>C language</h3>
+                        <a href="Cindex.html"><li>Introduction</li></a>
+                        <a href="Basic-structure.html"><li>Basic structure</li></a>
+                        <a href="C-tokens.html"><li>C tokens</li></a>
+                        <a href="Data-types.html"><li>Data types</li></a>
+                        <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                        <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                        <a href="Variables.html"><li>Variables</li></a>
+                        <a href="Constants.html"><li>Constants</li></a>
+                        <a href="Storege-classes.html"><li>Storege classes</li></a>
+                        <a href="Type-casting.html"><li>Type casting</li></a>
+                        <a href="Operatores.html"><li>Operatores</li></a>
+                        <a href="Typedef.html"><li>Typedef</li></a>
+                        <a href="Control-statements.html"><li style="background-color: rgb(214,214,214)">Control statements</li></a>
+                        <a href="Functions.html"><li>Functions</li></a>
+                        <a href="Recuresion.html"><li>Recursion</li></a>
+                        <a href="Arrays.html"><li>Arrays</li></a>
+                        <a href="Strings.html"><li>Strings</li></a>
+                        <a href="Pointers.html"><li>Pointers</li></a>
+                        <a href="Structures.html"><li>Structures</li></a>
+                        <a href="Unions.html"><li>Unions</li></a>
+                        <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                        <a href="Files.html"><li>Files</li></a>
+                        <a href="preprocessor.html"><li>Preprocessor</li></a>
+                        <a href="command-line-argument.html"><li>command line argument</li></a>
+                        <h3>Pratice in c</h3>
+                        <a href="Questions.html"><li>Questions</li></a>
+                    </ul>
+                    </nav>
+            </div>
+            <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                <div style="background-color: #e67e22;">
+                    <h1 style="margin-top: 0; padding: 6px;">for loop</h1>
+                </div>
+                <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                    <p>
+                        It is the most commonly used loop statement in C language. It is consisting of 3 expressions 
+                    </p>
+                    <h4>syntax</h4>
+<pre class="compiler">
+<span class="blue">for</span><span class="red">(</span><span>exp1 ; exp2 ; exp3</span><span class="red">)</span>
+<span class="red">{</span>
+  <span>statements</span><span class="red">;</span>
+<span  class="red">}</span>
+</pre>
+                    <p>
+                        In this loop first expression is used to initialize the index, second expression is used to test whether the loop is to be continued or not (test condition) and the third expression is used to change the index for further iteration  
+                    </p>
+                    <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>n,i</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter a number : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue">"%d",&n</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nNatural numbers from 1 to %d\n\n",n</span><span class="red">);</span>
+  <span class="blue">for</span><span class="red">(</span><span>i=1;i<=n;i++</span><span class="red">)</span>
+  <span class="red">{</span>
+    <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\t%d",i</span><span class="red">);</span>
+  <span class="red">}</span>
+<span class="red">}</span>
+</pre>
+                    <h4>output</h4>
+<pre class="compiler">
+<span>Enter a number : 4</span>
+<span>Natural numbers from 1 to 4</span>
+<span>1 2 3 4</span>
+</pre>
+                    <hr>
+                    <div>
+                        <a href="Control-statements.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                        <a href="Control-statements.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col span-1-of-5 right-box">
+                    <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                        nfoiehnf </p>
+            </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

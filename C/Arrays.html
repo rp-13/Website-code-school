@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+    <link rel="stylesheet" type="/text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="/text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="/text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="/text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="/text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="/text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li>Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li>Control statements</li></a>
+                            <a href="Functions.html"><li>Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li style="background-color: rgb(214,214,214)">Arrays</li></a>
+                            <a href="Strings.html"><li>Strings</li></a>
+                            <a href="Pointers.html"><li>Pointers</li></a>
+                            <a href="Structures.html"><li>Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li>Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                    <div style="background-color: #e67e22;">
+                        <h1 style="margin-top: 0; padding: 6px;">Arrays</h1>
+                    </div>
+                    <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                        <p>
+                            Array is a collection of data items ( variables) of same datatype, stored in a 
+                            continuous memory locations and it can be referred as a common name. A particular
+                             value in the array is accessed by using a number called index or subscript in 
+                             square braces after the array name.  
+                        </p>
+                        <h4>types of arrays</h4>
+                        <p>C  supports 3 types of arrays,they are</p>
+                        <div class="padding-ul ol">
+                            <ol>
+                                <li>One/single dimensional arrays</li>
+                                <li>Two /double dimensional arrays</li>
+                                <li>Multi dimensional arrays</li>
+                            </ol>
+                        </div>
+                        <h4>One/single dimensional array </h4>
+                        <p>
+                            A group of data items can be given one variable name, using only
+                             one index, such a variable is called as single dimensional array.  
+                        </p>
+                        <h4>
+                            declaration
+                        </h4>
+<pre class="compiler">
+<span>datatype arrname[size];</span>
+</pre>
+                        <p>Eg :   int a[5]; <br>
+                                Elements are :   a[0],a[1],a[2],a[3],a[4];</p>
+                        <h4>note</h4>
+                        <p>In any array, the array index is from  0 to size - 1</p>
+                        <h4>Initialization</h4>
+<pre class="compiler">
+<span>datatype arrname[size] = {val-1,val-2,…………..val-n};</span>
+</pre>
+                    <p>
+                            int a[5]={1,2,3,4,5}; <br>
+                            (or) <br>
+                     int a[ ]={1,2,3,4,5,6,7}; <br>
+                    </p>
+                    <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>i,a[5]=</span><span class="red">{</span><span>1,2,3,4,5</span><span class="red">};</span>
+  <span class="blue">for</span><span class="red">(</span><span class="boldall">i=0;i<5;i++</span><span class="red">)</span>
+  <span class="red">{</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"\n a[%d] = %d",i,a[i]</span><span class="red">);</span>
+  <span class="red">}</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+a[0] = 1
+a[1] = 2
+a[2] = 3
+a[3] = 4
+a[4] = 5
+</pre>
+                    <h4>Two (or) Double dimensional arrays </h4>
+                    <p>
+                         A  Two dimensional array can store a table of values which contains
+                          rows and columns. In this array we use 2 index values. The first 
+                          index is for rows and second index is for columns.
+                    </p>
+                    <p>The general form of   Two dimensional array is</p>
+                    <p>datatype   arr_name[row size][column size];</p>
+                    <p>Eg :   int a[3][3];</p>
+                    <p>
+                            Elements are  :  <br>
+                            a[0][0]      a[0][1]      a[0][2] <br>
+                            a[1][0]      a[1][1]      a[1][2] <br>
+                            a[2][0]      a[2][1]      a[2][2] <br>
+                    </p>
+                    <h4>Initialization</h4>
+                    <h4>form 1</h4>
+<pre class="compiler">
+<span>datatype arr_name[row size][col size]={value-1,........,value-n};</span>
+</pre>
+                    <p>
+                            Eg : <br>
+
+                            int a[2][2] = {1,2,3,4}; <br>
+                            int a[2][2] = {1,2,3,4,5};    not possible <br>
+                            
+                            int a[ ][2]  = {1,2,3,4,5};     is possible <br>
+                    </p>
+                    <p>
+                            Here the rows are allocated according to the given elements and it will assign zeros for remaining values. <br>
+                            1       2 <br>                                                                                                                                          
+                            3       4 <br>
+                            5       0 <br>
+
+                    </p>
+                    <h4>form 2</h4>
+<pre class="compiler">
+<span>datatype arr_name[row size][col size]={ {value-1,...,value-n};</span>
+</pre>
+                    <p>
+                            {value-1,...,value-n}, <br>
+                            -------------------- <br>
+                            -------------------- <br>
+                            {value-1,...,value-n}}; <br>
+
+                    </p>
+                    <p>
+                            Eg : <br>
+                            1) int a[3][3]={{1,2,3},{4,5,6},{7,8,9} }; <br>
+                          
+                                         1       2       3  <br>
+                                         4       5       6 <br>
+                                         7       8       9 <br>
+                          
+                          2) int a[3][3]={{1},{4,6},{8,9}}; <br>
+                          
+                                         1       0       0    <br>                                                                                                                                    
+                                         4       6       0 <br>
+                                         8       9       0 <br>
+                          
+                                If the values are missing it will assign zeros in that element place.
+                    </p>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>a[3][3]=</span><span>{1,2,3,4,5,6,7,8,9}</span><span class="red">;</span>
+  <span class="blue">int</span> <span>i,j</span><span class="red">;</span>
+  <span class="blue">for</span><span class="red">(</span><span class="boldall">i=0;i<3;i++</span><span class="red">)</span>
+    <span class="red">{</span>
+      <span class="blue">for</span><span class="red">(</span><span class="boldall">j=0;j<3;j++</span><span class="red">)</span>
+        <span class="red">{</span>
+          <span class="boldall">printf</span><span class="red">(</span><span class="blue">"%d\t",a[i][j]</span><span class="red">);</span>
+        <span class="red">}</span>
+        <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\n"</span><span class="red">);</span>
+    <span class="red">}</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>1 2 3</span>
+<span>4 5 6</span>
+<span>7 8 9</span>
+</pre>
+                    <h4>Multi dimensional array</h4>
+                    <p>
+                        C supports arrays of 3 or more dimensions. In Multi dimensional arrays we
+                         use more than 2 index values. 
+                    </p>
+                    <h4>syntax</h4>
+                    <p>
+                            Syntax :    <br>
+                            Datatype  arr_name [s1][s2]…………[sn]; <br>
+            
+                           Eg :   int a[2][2][3]; <br>
+                    </p>
+                    <p>
+                            Elements :     <br>
+                            a[0][0][0]      a[0][0][1]      a[0][0][2] <br>
+                            a[0][1][0]      a[0][1][1]      a[0][1][2] <br><br>
+    
+                            a[1][0][0]      a[1][0][1]      a[1][0][2] <br>
+                            a[1][1][0]      a[1][1][1]      a[1][1][2] <br>
+                    </p>
+                    <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>a[2][2][2],i,j,k</span><span class="red">;</span>
+  <span class="blue">for</span><span class="red">(</span><span>i=0;i<2;i++</span><span class="red"></span>
+  <span class="red">{</span>
+    <span class="blue">for</span><span class="red">(</span><span>j=0;j<2;j++</span><span class="red"></span>
+    <span class="red">{</span>
+      <span class="blue">for</span><span class="red">(</span><span>k=0;k<2;k++</span><span class="red"></span>
+      <span class="red">{</span>
+        <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter Value into a[%d][%d][%d] : ",i,j,k</span><span class="red">);</span>
+        <span class="boldall">scanf</span><span class="red">(</span><span class="blue">"%d",&a[i][j][k]</span><span class="red">);</span>
+      <span class="red">}</span>
+    <span class="red">}</span>
+  <span class="red">}</span>
+  <span class="blue">for</span><span class="red">(</span><span>i=0;i<2;i++</span><span class="red"></span>
+  <span class="red">{</span>
+    <span class="blue">for</span><span class="red">(</span><span>j=0;j<2;j++</span><span class="red"></span>
+    <span class="red">{</span>
+      <span class="blue">for</span><span class="red">(</span><span>k=0;k<2;k++</span><span class="red"></span>
+      <span class="red">{</span>
+        <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nGiven Value in a[%d][%d][%d] = %d",i,j,k,a[i][j][k]</span><span class="red">);</span>
+      <span class="red">}</span>
+    <span class="red">}</span>
+  <span class="red">}</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Enter Value into a[0][0][0] : 1</span>
+<span>Enter Value into a[0][0][1] : 2</span>
+<span>Enter Value into a[0][1][0] : 3</span>
+<span>Enter Value into a[0][1][1] : 4</span>
+<span>Enter Value into a[1][0][0] : 5</span>
+<span>Enter Value into a[1][0][1] : 6</span>
+<span>Enter Value into a[1][1][0] : 7</span>
+<span>Enter Value into a[1][1][1] : 8</span>
+
+<span>Given Value in a[0][0][0] = 1</span>
+<span>Given Value in a[0][0][1] = 2</span>
+<span>Given Value in a[0][1][0] = 3</span>
+<span>Given Value in a[0][1][1] = 4</span>
+<span>Given Value in a[1][0][0] = 5</span>
+<span>Given Value in a[1][0][1] = 6</span>
+<span>Given Value in a[1][1][0] = 7</span>
+<span>Given Value in a[1][1][1] = 8</span>
+</pre>
+
+                    <hr>
+                    </div>
+                    <div>
+                            <a href="Recuresion.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                            <a href="Strings.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+        </section>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

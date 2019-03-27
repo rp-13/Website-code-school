@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic structure</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+    <header>
+            <nav class="sticky">
+                <div class="row">
+                        <img src="/images/logo.png" alt="Logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="/languages.html">LANGUAGES</a></li>
+                        <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                        <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                        <li><a href="/Gate.html">GATE</a></li>
+                        <li><a href="#">SEARCH</a></li>
+                        <li><a href="/Login.html">LOGIN</a></li>
+                    </ul>
+                    <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                    <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                </div>
+            </nav>
+    </header>
+    <section>
+        <div class="row">
+            <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                <nav class="nav1">
+                    <ul>
+                        <h3>C language</h3>
+                        <a href="Cindex.html"><li>Introduction</li></a>
+                        <a href="Basic-structure.html"><li style="background-color: rgb(214,214,214)">Basic structure</li></a>
+                        <a href="C-tokens.html"><li>C tokens</li></a>
+                        <a href="Data-types.html"><li>Data types</li></a>
+                        <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                        <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                        <a href="Variables.html"><li>Variables</li></a>
+                        <a href="Constants.html"><li>Constants</li></a>
+                        <a href="Storege-classes.html"><li>Storege classes</li></a>
+                        <a href="Type-casting.html"><li>Type casting</li></a>
+                        <a href="Operatores.html"><li>Operatores</li></a>
+                        <a href="Typedef.html"><li>Typedef</li></a>
+                        <a href="Control-statements.html"><li>Control statements</li></a>
+                        <a href="Functions.html"><li>Functions</li></a>
+                        <a href="Recuresion.html"><li>Recursion</li></a>
+                        <a href="Arrays.html"><li>Arrays</li></a>
+                        <a href="Strings.html"><li>Strings</li></a>
+                        <a href="Pointers.html"><li>Pointers</li></a>
+                        <a href="Structures.html"><li>Structures</li></a>
+                        <a href="Unions.html"><li>Unions</li></a>
+                        <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                        <a href="Files.html"><li>Files</li></a>
+                        <a href="preprocessor.html"><li>Preprocessor</li></a>
+                        <a href="command-line-argument.html"><li>command line argument</li></a>
+                        <h3>Pratice in c</h3>
+                        <a href="Questions.html"><li>Questions</li></a>
+                    </ul>
+                 </nav>
+            </div>
+            <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                <div style="background-color: #e67e22;">
+                    <h1 style="margin-top: 0; padding: 6px;">Basic&mdash;structure</h1>
+                </div>
+                <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                    <h2>Basic structure of C program</h2>
+<pre class="compiler">
+<span>Document section</span>
+<span>Preprocessor Section (or) Link section</span>
+<span>Global declaration Section</span>
+<span>main()</span>
+<span>{</span>
+<span>     [Local declaration section]</span>
+<span>     Statements</span>
+<span>}</span>
+<span>Sub program section</span>
+</pre>
+                    <h4>Document section </h4>
+                    <p>
+                        It consists a set of comment lines giving the name of the program, author name 
+                        and some other details about the entire program.
+                    </p>
+                    <h4>Preprocessor Section (or) Link section </h4>
+                    <p>
+                        It provides instructions to the compiler to link the functions from the 'C' library.
+                    </p>
+                    <h4>Global declaration Section</h4>
+                    <p>
+                        The Variables that are used in more than one function are called as global 
+                        variables and  these are declared in global declaration section.
+                    </p>
+                    <h4>Main function section</h4>
+                    <p>
+                        Every C program must have one function. i.e. main function. This section contains 2 parts.
+                    </p>
+                    <div class="padding-ul">
+                        <ol>
+                            <li>Local declaration section.</li>
+                            <li>Statements  section.</li>
+                        </ol>
+                    </div>
+                    <p>
+                        The Local declaration section declares all the variables used in statements. 
+                        The statements part consists a sequence of executable statements.These 2 parts
+                         must appear between opening and closing curly braces. The program execution 
+                         begins at the opening brace and ends at closing brace.
+                    </p> 
+                    <h4>Sub programming section</h4>
+                    <p>
+                        It contains all the user defined functions. This section may be placed before
+                         or after main function.
+                    </p>
+                    <h4>Comments</h4>
+                    <p>
+                        Unexecutable lines in a program are called as 
+                        comments. These lines are skipped by the compiler.    
+                    </p> 
+<pre class="compiler">
+<span class="litebl">/*</span>
+<span class="litebl">  Multi  line comment. </span>
+<span class="litebl">  Multi  line comment. </span>
+<span class="litebl">*/  </span>
+<span class="litebl">//single line comment.</span>
+</pre>
+                    <hr>
+                </div>
+                <div>
+                    <a href="Cindex.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                    <a href="C-tokens.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                </div>
+            </div>
+            <div class="col span-1-of-5 right-box">
+                    <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                    nfoiehnf </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

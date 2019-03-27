@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+    <header>
+            <nav class="sticky">
+                <div class="row">
+                        <img src="/images/logo.png" alt="Logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="/languages.html">LANGUAGES</a></li>
+                        <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                        <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                        <li><a href="/Gate.html">GATE</a></li>
+                        <li><a href="#">SEARCH</a></li>
+                        <li><a href="/Login.html">LOGIN</a></li>
+                    </ul>
+                    <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                    <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                </div>
+            </nav>
+    </header>
+    <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li>Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li style="background-color: rgb(214,214,214)">Control statements</li></a>
+                            <a href="Functions.html"><li>Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li>Arrays</li></a>
+                            <a href="Strings.html"><li>Strings</li></a>
+                            <a href="Pointers.html"><li>Pointers</li></a>
+                            <a href="Structures.html"><li>Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li>Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                        <div style="background-color: #e67e22;">
+                            <h1 style="margin-top: 0; padding: 6px;">switch</h1>
+                        </div>
+                        <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                                <p>
+                                        It is a multiway conditional control statement used in C language. 
+                                        It is mainly used in situations where there is need to pick 
+                                        one alternative among many alternatives. 
+                                </p>
+                                <h4>syntax</h4>
+<pre class="compiler">
+switch(variable / expression)
+{
+  case   value-1 :
+    statements – 1;
+    break;    
+  case  value-2 :
+    statements – 2;
+    break;       
+    ……………………
+    ……………………
+  case  value-n :
+    statements – n;
+    break;       
+  default :
+    default statements;
+}   
+</pre>
+                                    <p>
+                                    The switch statement tests the value of given variable or 
+                                    expression against a list of case values. When a match is 
+                                    found, the statement associated to that case is executed
+                                     and the control transfer to the next statement, otherwise
+                                      the default statements will be executed.
+                
+                                    </p>
+                                    <h4>break</h4>
+                                    <p>
+                                            It is an unconditional control statement and used to
+                                             terminate a switch statement or a loop statement. 
+                                    </p>
+                                    <h4>syntax</h4>
+                                    <p>break;</p>
+                                    <h4>note</h4>
+                                    <p>
+                                        In switch statement the variable or expression is an integral value(integer or character), we cannot use floating  and string values.
+                                        In switch statement, the default case is optional. 
+                                    </p>
+                                    <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>a,b,opt</span><span class="red">;</span> 
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Enter two  numbers : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue">"%d%d",&a,&b</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"1-Addition\n2-Subtraction\n3-Multiplication\n4-Division
+        \n5-Modulus\nEnter your option : "</span><span class="red">);</span>
+<span class="boldall">scanf</span><span class="red">(</span><span class="blue">"%d",&opt</span><span class="red">);</span>
+<span class="blue">switch</span><span class="red">(</span><span>opt</span><span class="red">)</span>
+  <span class="red">{</span>
+    <span class="blue">case</span> <span>1:</span>
+    <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Addition of %d and %d is %d",a,b,a+b</span><span class="red">);</span>
+    <span class="boldall">break;</span>
+    <span class="blue">case</span> <span>2:</span>
+    <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Subtraction of %d and %d is %d",a,b,a-b</span><span class="red">);</span>
+    <span class="boldall">break;</span>
+    <span class="blue">case</span> <span>3:</span>
+    <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Multiplication of %d and %d is %d",a,b,a*b</span><span class="red">);</span>
+    <span class="boldall">break;</span>
+    <span class="blue">case</span> <span>4:</span>
+    <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Division of %d and %d is %.2f",a,b,(float)a/b</span><span class="red">);</span>
+    <span class="boldall">break;</span>
+    <span class="blue">default</span>
+    <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Invalid Option"</span><span class="red">);</span>
+  <span class="red">}</span>
+<span class="red">}</span>
+</pre>
+                                    <h4>output</h4>
+<pre class="compiler">
+<span>Enter two  numbers : 2 3</span>
+<span>1</span>
+<span>Addition of 2 and 3 is 5</span>
+</pre>
+
+                                    <hr>
+                            <div>
+                                <a href="Control-statements.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                                <a href="Control-statements.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

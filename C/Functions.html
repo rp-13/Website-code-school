@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li>Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li>Control statements</li></a>
+                            <a href="Functions.html"><li style="background-color: rgb(214,214,214)">Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li>Arrays</li></a>
+                            <a href="Strings.html"><li>Strings</li></a>
+                            <a href="Pointers.html"><li>Pointers</li></a>
+                            <a href="Structures.html"><li>Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li>Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li>Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                    <div style="background-color: #e67e22;">
+                        <h1 style="margin-top: 0; padding: 6px;">Functions</h1>
+                    </div>
+                    <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                        <p>
+                            Function is a self contained block of statements and it performs a particular task . It can be used at several times in a program, but defined only once.
+                            They are of 2 types. 
+                        </p>
+                        <div class="padding-ul ol">
+                            <ol>
+                                <li>Library functions (or) pre-define functions</li>
+                                <li>User defined functions.</li>
+                            </ol>
+                        </div>
+                        <h4>Library functions</h4>
+                        <p>
+                            The functions which are In-built with the compiler are known as Library
+                             functions (or) Pre-defined functions.
+                        </p>
+                        <p>
+                            Eg:
+                                printf <br>
+                                scanf <br>
+                                getch  etc <br>
+                        </p>
+                        <h4>
+                            Userdefined functions
+                        </h4>
+                        <p>
+                             User can define functions to do a task relavant to their programs.Such 
+                             functions are called as userdefined functions. 
+                        </p>
+                        <h4>note</h4>
+                        <p>
+                            "main" is pre-declared user defined function 
+                        </p>
+                        <p>
+                            Any function( either pre-defined (or) user defined) has 3 things. 
+                        </p>
+                        <div class="padding-ul ol">
+                            <ol>
+                                <li>Function declaration</li>
+                                <li>Function definition</li>
+                                <li>Function calling</li>
+                            </ol>
+                        </div>
+                        <p>
+                            In case of Library functions(pre-defined), the function declaration is in header files,
+                             function definition is in  C libraries  and  function calling is in source program. But in
+                              case of user defined functions all three things are in source program.
+                        </p>
+                        <h4>Function declaration</h4>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>returntype   function_name (  [argument_list]  );</span>
+</pre>
+                        <h4>Function definition</h4>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>returntype   function_name ( [argument_list] )</span>
+<span>{</span>
+  <span>statements</span>
+<span>}</span>
+</pre>
+                        <h4>Function calling</h4>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>function_name (  [parameter_list]  );</span>
+</pre>
+                        <h4>note</h4>
+                        <p>
+                            The arguments which are given at the time of function declaration or function definition
+                             are called as arguments or formal arguments. The arguments which are given at the time
+                              of function calling are called as parameters or actual arguments
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">void</span> <span class="boldall">func</span><span class="red">(</span><span class="red">)</span><span class="red">;</span>
+  <span class="boldall">func</span><span class="red">(</span><span class="red">)</span><span class="red">;</span>
+<span class="red">}</span>
+<span class="blue">void</span> <span class="boldall">func()</span>
+<span class="red">{</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">“\nWelcome to C Functions”</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Welcome to C Functions</span>
+</pre>
+                        <h4>Rules for Creating and accessing functions</h4>
+                        <p>
+                            <div class="padding-ul ol">
+                                <ol>
+                                    <li>A function  can be called by any number of times.</li>
+                                    <li>A function may or maynot receive arguments.</li>
+                                    <li>A function may or may not  return a value</li>
+                                    <li>If a function doesnot return any value, the function return data type will be specified as void.</li>
+                                    <li>If A  function returns a value ,only one value it can be returned.</li>
+                                    <li>If a function returnrs a value, the returning value must be returned with statement "return".</li>
+                                    <li>If a function returns a value ,the execution of the return  statement should be last.</li>
+                                    <li>If we cannot specify any returntype, the function returns an int  by default.</li>
+                                    <li>A function returns a value, the returning value should  match with the function return data type.</li>
+                                    <li>A function is defined after or before the main function.</li>
+                                    <li>Before calling a function, the function declaration or definition is must and should </li>
+                                    <li>if a function definition is specified before the function call, then the function declaration is not necessary.</li>
+                                    <li>A function is executed when the function is called by its name.</li>
+                                    <li>If a function returns a value,the return value is replaced by function calling statement.</li>
+                                    <li>The function definition should not be terminated with a semicolon(;)</li>
+                                </ol>
+                            </div>
+                        </p>
+                        <h4>return(keyword)</h4>
+                        <p>
+                            Exits immediately from the currently executing function to the calling routine,
+                             optionally returning a value. 
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>return   [expr];</span>
+</pre>
+<h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span class="boldall">maxval(int,int)</span><span class="red">;</span>
+  <span class="blue">int</span> <span>a,b,m</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter any two numbrs : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue"></span>"%d%d",&a,&b</span><span class="red">);</span>
+  <span>m=maxval</span><span class="red">(</span><span>a,b</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Maximum Value : %d",m</span><span class="red">);</span>
+<span class="red">}</span>
+<span class="blue">int</span> <span>maxval</span><span class="red">(</span><span class="blue">int</span><span> x,</span><span class="blue">int</span><span> y</span><span class="red">)</span>
+<span class="red">{</span>
+  <span class="blue">if</span><span class="red">(</span><span>x>y</span><span class="red">)</span>
+  <span class="boldall">return</span> <span>x</span><span class="red">;</span>
+  <span class="blue">else</span>
+  <span class="boldall">return</span> <span>y</span><span class="red">;</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Enter any two numbrs : 2 3</span>
+<span>Maximum Value : 3</span>
+</pre>
+                    <h4>
+                        Function categories (or) Function prototypes   
+                    </h4>
+                    <p>
+                        A function ,depending on whether arguments are present or not and 
+                         whether a value is returning or not,may belongs to one of the following 
+                         categories. 
+                    </p>
+                    <p>
+                        <div class="padding-ul ol">
+                            <ol>
+                                <li>Function with no arguments and return no value</li>
+                                <li>Function with arguments and no return value.</li>
+                                <li>Function with arguments and return value.</li>
+                                <li>Function with no arguments and return value.</li>
+                            </ol>
+                        </div>
+                    </p>
+                    <h4>Function with no arguments and no return value</h4>
+                    <p>
+                        In this type the function(called) has no arguments, it doesnot receive any
+                         data from the calling function. Similarly it doesnot return any value, the 
+                         calling function doesnot receive any data from called function. So there is no 
+                         data communication between calling function and called function.
+                    </p>
+                    <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">void</span> <span class="boldall">sum</span><span class="red">(</span><span class="red">)</span><span class="red">;</span>
+  <span class="boldall">sum</span><span class="red">(</span><span class="red">)</span><span class="red">;</span>
+<span class="red">}</span>    
+<span class="blue">void</span> <span class="boldall">sum()</span>
+<span class="red">{</span>  
+  <span class="blue">int</span> <span>a,b</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter any two numbrs : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue"></span>"%d%d",&a,&b</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"sum= %d",a+b</span><span class="red">);</span>
+<span class="red">}</span> 
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Enter any two numbrs : 2 3</span>
+<span>sum= 5</span>
+</pre>
+                    <h4>Function with  arguments and no return value</h4>
+                    <p>
+                        In this type the function has some arguments, it receives data from the calling
+                         function. But it doesnot return any value, the calling function doesnot
+                          receive any data from the called function. So there is one way data
+                           communication between calling function and called function. 
+                    </p>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">void</span> <span class="boldall">sum</span><span class="red">(</span><span class="blue">int</span><span class="blue"> int</span><span class="red">)</span><span class="red">;</span>
+  <span class="blue">int</span> <span>a,b,s</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter any two numbrs : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue"></span>"%d%d",&a,&b</span><span class="red">);</span>
+  <span class="boldall">sum</span><span class="red">(</span><span>a,b</span><span class="red">)</span>
+<span class="red">}</span>
+<span class="blue">void</span> <span class="boldall">sum</span><span class="red">(</span><span class="blue">int</span><span> x,</span><span class="blue">int</span><span> y</span><span class="red">)</span>
+<span class="red">{</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"sum= %d",x+y</span><span class="red">);</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Enter any two numbrs : 2 3</span>
+<span>sum= 5</span>
+</pre>
+                    <h4>Function with  arguments and  return value</h4>
+                    <p>
+                        In this type the function has some arguments, it receives data from the calling
+                         function. Similarly it returns a value, the calling function  receives data from the
+                          called function. So there is two way data communication between calling function
+                           and called function. 
+                    </p>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span class="boldall">sum</span><span class="red">(</span><span class="blue">int</span><span class="blue"> int</span><span class="red">)</span><span class="red">;</span>
+  <span class="blue">int</span> <span>a,b,s</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter any two numbrs : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue"></span>"%d%d",&a,&b</span><span class="red">);</span> 
+  <span>s=</span><span class="boldall">sum</span><span class="red">(</span><span>a,b</span><span class="red">)</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"sum= %d",s</span><span class="red">);</span>
+<span class="red">}</span>
+<span class="blue">void</span> <span class="boldall">sum</span><span class="red">(</span><span class="blue">int</span><span> x,</span><span class="blue">int</span><span> y</span><span class="red">)</span>
+<span class="red">{</span>
+  <span class="boldall">return</span> <span>x+y</span><span class="red">;</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Enter any two numbrs : 2 3</span>
+<span>sum= 5</span>
+</pre>
+                    <h4>Function with  no arguments and  return value</h4>
+                    <p>
+                        In this type the function has no arguments, it doesnot receive any data
+                         from the calling function. But it returns a value, the calling function
+                          receives data from the called function. So there is one way data
+                           communication between called function and calling function 
+                    </p>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span class="boldall">sum</span><span class="red">(</span><span class="red">)</span><span class="red">;</span>
+  <span class="blue">int</span> <span>s</span><span class="red">;</span>
+  <span>s=</span><span class="boldall">sum</span><span class="red">(</span><span class="red">)</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"sum= %d",s</span><span class="red">);</span>
+<span class="red">}</span>
+<span class="blue">int</span> <span class="boldall">sum()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>a,b</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue"></span>"Enter any two numbrs : "</span><span class="red">);</span>
+  <span class="boldall">scanf</span><span class="red">(</span><span class="blue"></span>"%d%d",&a,&b</span><span class="red">);</span>
+  <span class="boldall">returen</span> <span>a+b</span><span class="red">;</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span>Enter any two numbrs : 2 3</span>
+<span>sum= 5</span>
+</pre>
+    <hr>
+                    </div>
+                    <div>
+                            <a href="Control-statements.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                            <a href="Recuresion.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+        </section>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic memory allocation</title>
+    <link rel="stylesheet" type="text/css" href="/css/Cindexstyel.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/css/devicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
+    <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+    <link href="https://unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href=/images/logo.png>
+</head>
+<body>
+        <header>
+                <nav class="sticky">
+                    <div class="row">
+                            <img src="/images/logo.png" alt="Logo" class="logo-black">
+                        <ul class="main-nav js--main-nav">
+                            <li><a href="/index.html">HOME</a></li>
+                            <li><a href="/languages.html">LANGUAGES</a></li>
+                            <li><a href="/Data-structres.html">DATA STRUCTRES</a></li>
+                            <li><a href="/Algorithms.html">ALGORITHUMS</a></li>
+                            <li><a href="/Gate.html">GATE</a></li>
+                            <li><a href="#">SEARCH</a></li>
+                            <li><a href="/Login.html">LOGIN</a></li>
+                        </ul>
+                        <a class="mobile-nav-bar js--mobile-nav"><i class="icon ion-ios-menu"></i></a>
+                        <a class="mobile-left-nav-bar js--mobile-left-nav"><i class="icon ion-ios-menu"></i></a>
+                    </div>
+                </nav>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col span-1-of-5 left-box main-mobile-nav js--main-mobile-nav" style="border: 1px solid #e67e22;">
+                    <nav class="nav1">
+                        <ul>
+                            <h3>C language</h3>
+                            <a href="Cindex.html"><li>Introduction</li></a>
+                            <a href="Basic-structure.html"><li>Basic structure</li></a>
+                            <a href="C-tokens.html"><li>C tokens</li></a>
+                            <a href="Data-types.html"><li>Data types</li></a>
+                            <a href="Type-modifiers.html"><li>Type modifiers</li></a>
+                            <a href="Input-and-Output.html"><li>Input and Output</li></a>
+                            <a href="Variables.html"><li>Variables</li></a>
+                            <a href="Constants.html"><li>Constants</li></a>
+                            <a href="Storege-classes.html"><li>Storege classes</li></a>
+                            <a href="Type-casting.html"><li>Type casting</li></a>
+                            <a href="Operatores.html"><li>Operatores</li></a>
+                            <a href="Typedef.html"><li>Typedef</li></a>
+                            <a href="Control-statements.html"><li>Control statements</li></a>
+                            <a href="Functions.html"><li>Functions</li></a>
+                            <a href="Recuresion.html"><li>Recursion</li></a>
+                            <a href="Arrays.html"><li>Arrays</li></a>
+                            <a href="Strings.html"><li>Strings</li></a>
+                            <a href="Pointers.html"><li>Pointers</li></a>
+                            <a href="Structures.html"><li>Structures</li></a>
+                            <a href="Unions.html"><li>Unions</li></a>
+                            <a href="Dynamic-memory-allocation.html"><li style="background-color: rgb(214,214,214)">Dynamic memory allocation</li></a>
+                            <a href="Files.html"><li>Files</li></a>
+                            <a href="preprocessor.html"><li>Preprocessor</li></a>
+                            <a href="command-line-argument.html"><li>command line argument</li></a>
+                            <h3>Pratice in c</h3>
+                            <a href="Questions.html"><li>Questions</li></a>
+                        </ul>
+                     </nav>
+                </div>
+                <div class="col span-3-of-5" style="border: 1px solid #e67e22;">
+                    <div style="background-color: #e67e22;">
+                        <h1 style="margin-top: 0; padding: 6px;">Dynamic Memory Allocation(DMA)</h1>
+                    </div>
+                    <div style="padding-left: 7px;padding-right: 7px;" class="paddingforall">
+                        <p>
+                            C language requires the number of elements in an array to be specified at 
+                            compile time. But we may not be able to do so always. Our initial judgement of
+                             size, if it is wrong may cause failure of program or wastage of memory space.
+                              At this situation we can use DMA. 
+                        </p>
+                        <h4>definition</h4>
+                        <p>
+                            The process of allocating memory at run time is known as Dynamic Memory Allocation (DMA).
+                        </p>
+                        <h4>malloc</h4>
+                        <p>
+                                &lt;alloc.h&gt; <br>
+                                It is used to allocate memory at runtime.
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>void *  malloc(size_t  size);</span>
+</pre>
+                        <p>size_t :   It is the data type used for memory object 
+                                size.  Also it is another name for unsigned 
+                                integer. <br>
+                 
+                              pointer = (typecast) malloc(memory size); <br>
+                        </p>
+                        <p>Eg:</p>
+<pre class="compiler">
+<span class="blue">int</span><span> *p</span><span class="red">;</span>
+<span>p = (int *) malloc(sizeof(int));</span> <span class="litebl">// 1 location</span>
+<span>p = (int *) malloc(5 * sizeof(int));</span> <span class="litebl">// 5 locations</span>
+</pre>
+                        <p>     
+                            It allocates specified number of locations in the heap(main memory) and initialized to garbage values. 
+                        </p>
+                        <h4>calloc</h4>
+                        <p>
+                                <alloc.h> 
+                                        It is also used to allocate memory at runtime.
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>void * calloc(size_t  nitems ,size_t size);</span>
+<span>pointer = (typecast) calloc(number of locations, size of each  location);</span>
+</pre>
+<p>Eg:</p>
+<pre class="compiler">
+<span class="blue">int</span><span> *p</span><span class="red">;</span>
+<span>p = (int *) calloc(1, sizeof(int));</span> <span class="litebl">// 1 location</span>
+<span>p = (int *) calloc(5, sizeof(int));</span> <span class="litebl">// 5 locations</span>
+</pre>
+                        <P>
+                           It allocates specified number of locations in the heap(main memory) and initialized to zeroes.
+                        </p>
+                        <h4>free </h4>
+                        <p>It frees the allocated blocks.</p>
+                        <h4>syntax</h4>
+<pre  class="compiler">
+<span>void free(void * block);</span>
+</pre>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="green">#include&lt;alloc.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>
+  <span class="blue">int</span> <span>*p1,*p2,i</span><span class="red">;</span>
+  <span> p1=(int *)malloc(5*sizeof(int))</span><span class="red">;</span>
+  <span>p2=(int *)calloc(5,sizeof(int))</span><span class="red">;</span>
+<span class="boldall">printf</span><span class="red">(</span><span class="blue">"MALLOC : "</span><span class="red">);</span>
+  <span class="blue">for</span><span>(i=0;i<5;i++)</span>
+<span class="red">{</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"%d\t",*(p1+i)</span><span class="red">);</span>
+<span class="red">}</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nCALLOC : "</span><span class="red">);</span>
+  <span class="blue">for</span><span>(i=0;i<5;i++)</span>
+  <span class="red">{</span>
+    <span class="boldall">printf</span><span class="red">(</span><span class="blue">"%d\t",*(p2+i)</span><span class="red">);</span>
+  <span class="red">}</span>
+<span class="boldall">free(p1)</span><span class="red">;</span>
+<span class="boldall">free(p2)</span><span class="red">;</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+                        <h4>realloc</h4>
+                        <p>
+                                <alloc.h>
+                                        It reallocates main memory at run time.
+                        </p>
+                        <h4>syntax</h4>
+<pre class="compiler">
+<span>void * realloc(void * block, size_t size);</span>
+</pre>
+                        <p>
+                            realloc adjusts the size of allocated block to size, copying the contents to a new location 
+                        </p>
+                        <h4>code</h4>
+<pre class="compiler">
+<span class="green">#include&lt;stdio.h&gt;</span>
+<span class="green">#include&lt;conio.h&gt;</span>
+<span class="green">#include&lt;alloc.h&gt;</span>
+<span class="green">#include&lt;string.h&gt;</span>
+<span class="blue">void</span> <span class="boldall">main()</span>
+<span class="red">{</span>  
+  <span class="blue">char</span> <span>*str</span><span class="red">;</span>
+  <span>str=(char *)malloc(10)</span><span class="red">;</span>
+  <span>strcpy</span><span class="red">(</span><span class="blue">str,"Hello "</span><span class="red">);</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"Given String : %s",str</span><span class="red">);</span>
+  <span>str=(char *)realloc(str,25)</span><span class="red">;</span>
+  <span>strcat(str," Welcome to rp")</span><span class="red">;</span>
+  <span class="boldall">printf</span><span class="red">(</span><span class="blue">"\nNew String   : %s",str</span><span class="red">);</span>
+  <span>free(str)</span><span class="red">;</span>
+<span class="red">}</span>
+</pre>
+<h4>output</h4>
+<pre class="compiler">
+<span></span>
+</pre>
+    <hr>
+                    </div>
+                    <div>
+                            <a href="Unions.html" style="float: left; margin-left: 13px; margin-top: 8px;" class="btn btn-ghost">Go to Back</a>
+                            <a href="Files.html" style="float: right; margin-bottom: 8px; margin-top: 8px;" class="btn btn-full">Go to next</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-5 right-box">
+                        <p>right side aofhoauf afoiaeaf aocnoiaf onfoiafn alfioaef anfaef lenccoe nfowenf
+                            nfoiehnf </p>
+                </div>
+            </div>
+        </section>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/java script/jquery.waypoints.min.js"></script>
+    <script src="/java script/jqueryforC.js"></script>
+</body>
+</html>
